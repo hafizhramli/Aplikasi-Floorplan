@@ -51,12 +51,7 @@ const App = () => {
                 ctx.fillRect(-el.width / 2, -el.height / 2, el.width, el.height);
                 ctx.strokeStyle = '#5c4033';
                 ctx.strokeRect(-el.width / 2, -el.height / 2, el.width, el.height);
-            } else if (el.type === 'Ruangan') {
-                ctx.fillStyle = 'rgba(200, 200, 255, 0.5)';
-                ctx.fillRect(-el.width / 2, -el.height / 2, el.width, el.height);
-                ctx.strokeStyle = '#5a5a5a';
-                ctx.strokeRect(-el.width / 2, -el.height / 2, el.width, el.height);
-            }
+            } 
 
             ctx.restore();
 
@@ -236,7 +231,7 @@ const App = () => {
                 <aside className="w-64 bg-white p-6 rounded-lg shadow-lg flex-shrink-0">
                     <h2 className="text-xl font-semibold mb-4 text-gray-700">Elemen Denah Lantai</h2>
                     <div className="flex flex-col space-y-4">
-                        {['Meja', 'Kursi', 'Pintu', 'Ruangan'].map(type => (
+                        {['Meja', 'Kursi', 'Pintu'].map(type => (
                             <button
                                 key={type}
                                 draggable="true"
